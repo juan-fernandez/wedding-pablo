@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from wedding.views import Landing
 
 urlpatterns = [
+    path('', Landing.as_view(), name='landing'),
     path('admin/', admin.site.urls),
 ]
