@@ -12,7 +12,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.8;
@@ -40,7 +40,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   color: #000;
-  font-family: "Clicker Script", cursive;
+  font-family: 'Poppins', sans-serif;
   font-weight: 400;
 }
 
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 #qbootstrap-header #navbar li a {
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: rgba(255, 255, 255, 0.5);
   position: relative;
 }
@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 34px;
   padding-left: 0;
   color: #fff;
-  font-family: "Clicker Script", cursive;
+  font-family: 'Poppins', sans-serif;
 }
 #qbootstrap-header.navbar-fixed-top {
   position: fixed !important;
@@ -370,7 +370,7 @@ h1, h2, h3, h4, h5, h6 {
 .qbootstrap-cover .display-tc .holder,
 .video-hero .display-tc .holder {
   color: #fff;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 10px;
@@ -532,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #qbootstrap-slider-hero .flexslider .slider-text > .slider-text-inner .holder {
   color: #fff;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 10px;
@@ -577,7 +577,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 40px;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 #qbootstrap-slider-hero .flexslider .slider-text > .slider-text-inner h2 a {
   color: rgba(255, 255, 255, 0.5);
@@ -617,7 +617,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #qbootstrap-couple h3 {
   font-size: 34px;
-  font-family: "Clicker Script", cursive;
+  font-family: 'Poppins', sans-serif;
   color: #FF847C;
 }
 @media screen and (max-width: 768px) {
@@ -701,12 +701,12 @@ h1, h2, h3, h4, h5, h6 {
 #qbootstrap-countdown .countdown span {
   margin: 0 30px;
   display: inline-block;
-  font-family: "Clicker Script", cursive;
+  font-family: 'Poppins', sans-serif;
 }
 #qbootstrap-countdown .countdown small {
   display: block;
   font-size: 14px;
-  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 10px;
   text-transform: uppercase;
 }
@@ -1084,7 +1084,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding: 0;
   font-size: 30px;
-  font-family: "Clicker Script", cursive;
+  font-family: 'Poppins', sans-serif;
   font-style: italic;
 }
 #qbootstrap-testimonials .arrow-thumb {
@@ -1128,7 +1128,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .groom-men h3 {
-  font-family: "Clicker Script", cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 28px;
 }
 
