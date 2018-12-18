@@ -62,9 +62,10 @@
 			<!-- <div class="row"> -->
 		    <nav class="navbar navbar-default">
 	        <div id="navbar" class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav navbar-right">
-	            <li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
-	            <li><a href="#" data-nav-section="groom-bride"><span>Groom &amp; Bride</span></a></li>
+	          <ul class="nav navbar-nav navbar-right au-navbar">
+				<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+				<li><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#myModal">Registro</button></li>
+				<li><a href="#" data-nav-section="groom-bride"><span>Groom &amp; Bride</span></a></li>
 	            <li><a href="#" data-nav-section="story"><span>Love Story</span></a></li>
 	            <li><a href="#" data-nav-section="greetings"><span>Greetings</span></a></li>
 	            <li><a href="#" data-nav-section="people"><span>People</span></a></li>
@@ -669,6 +670,26 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- Registration Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+  
 	
 	
 	<!-- jQuery -->
