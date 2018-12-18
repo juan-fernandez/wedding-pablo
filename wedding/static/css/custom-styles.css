@@ -11,3 +11,15 @@
   display: flex;
   align-items: baseline;
 }
+
+.au-modal-confirm {
+  font-size: 14px;
+}
+
+.au-modal-confirm .form-control {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1;
+  height: 35px;
+  margin-top: 5px;
+}
