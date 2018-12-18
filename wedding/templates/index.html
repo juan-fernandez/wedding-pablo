@@ -24,13 +24,14 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
-
+	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="{% static "images/AUPA-LOGO-01-favicon.png" %}">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
 	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="{% static "css/animate.css" %}">
 	<!-- Icomoon Icon Fonts-->
@@ -62,11 +63,11 @@
 			<!-- <div class="row"> -->
 		    <nav class="navbar navbar-default">
 	        <div id="navbar" class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav navbar-right au-navbar">
-				<li class="active"><a href="#" data-nav-section="home"><span>Home</span></a></li>
+	          <ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="#" data-nav-section="home"><span>Inicio</span></a></li>
+				<li><a href="#" data-nav-section="church">La Iglesia</a></li>
+				<li><a href="#" data-nav-section="venue"><span>La Finca</span></a></li>
 				<li><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-confirm">Registro</button></li>
-				<li><a href="#" data-nav-section="groom-bride"><span>Groom &amp; Bride</span></a></li>
-	            <li><a href="#" data-nav-section="story"><span>Love Story</span></a></li>
 	            <li><a href="#" data-nav-section="greetings"><span>Greetings</span></a></li>
 	            <li><a href="#" data-nav-section="people"><span>People</span></a></li>
 	            <li><a href="#" data-nav-section="when-where"><span>When &amp; Where</span></a></li>
@@ -79,10 +80,10 @@
 		  <!-- </div> -->
 	  </div>
 	</header>
-	
+
 	<div class="qbootstrap-hero" data-section="home">
 		<div class="qbootstrap-overlay"></div>
-		<div class="qbootstrap-cover text-center pablo-aurora-bg" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/bodadeaupa_centered.png);">
+		<div class="qbootstrap-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/bodadeaupa_centered_2.jpg);">
 			<div class="display-t">
 				<div class="display-tc">
 					<div class="container">
@@ -106,169 +107,43 @@
 				<div class="col-md-8 col-md-offset-2 animate-box">
 					<div class="col-md-12 text-center section-heading svg-sm colored">
 						<img class="logo-get-married" src="{% static "images/AUPA-LOGO-01.png" %}" class="svg" alt="">
-						<h2>Se casan</h2>
-						<p><strong>18 de mayo de 2019 &mdash; Iglesia San Jerónimo el Real (C/  Moreto 4. Madrid)</strong></p>
-					</div>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-						<img src="{% static "images/groom.jpg" %}" class="img-responsive" alt="">
-						<h3>Louie Jie L. Mahusay</h3>
-						<span>Groom</span>
-					</div>
-					<div class="col-md-2 col-sm-2 col-xs-2 nopadding"><h2 class="amp-center"><img src="{% static "images/flaticon/svg/003-luxury.svg" %}" class="svg img-responsive" alt=""></h2></div>
-					<div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-						<img src="{% static "images/bride.jpg" %}" class="img-responsive" alt="">
-						<h3>Marializa R. Tabay</h3>
-						<span>Bride</span>
+						
+						<h2>Boda de Aupa</h2>
+						<p><strong>¡Hola! Bienvenido a bodadeaupa. Aquí encontrarás noticias e información actualizada sobre el evento.</strong></p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div id="qbootstrap-countdown" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/bodadeaupa_centered.png);" data-section="wedding-day">
+	<div id="qbootstrap-countdown" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/bodadeaupa_centered.png);" data-section="church">
 		<div class="overlay"></div>
 		<div class="display-over">
 			<div class="container">
 				<div class="row animate-box">
 					<div class="col-md-12 section-heading text-center svg-sm colored">
-						<img src="{% static "images/flaticon/svg/006-flower-bell-outline-design-variant-with-vines-and-leaves.svg" %}" class="svg" alt="">
-						<h2 class="">The Wedding Day</h2>
-						<span class="datewed">Saturday, Dec. 2, 2017</span>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-8 col-md-offset-2 text-center">
-						<p class="countdown">
-							<span id="days"></span>
-							<span id="hours"></span>
-							<span id="minutes"></span>
-							<span id="seconds"></span>
-						</p>
+						<img src="{% static "images/AUPA-icon-blanco-01.png" %}" class="svg" alt="">
+						<h2 class="">La Iglesia</h2>
+						<div class="datewed">San Jerónimo el Real (C/  Moreto 4. Madrid)</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="qbootstrap-groom-bride" data-section="groom-bride">
+	<div id="qbootstrap-groom-bride" data-section="venue">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="col-md-12 text-center section-heading svg-sm-2 colored">
 						<img src="{% static "images/flaticon/svg/002-wedding-couple.svg" %}" class="svg" alt="">
-						<h2>Groom &amp; Bride</h2>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, sequi, minima repellendus explicabo magni aperiam, ducimus perferendis ad quidem suscipit omnis unde veritatis pariatur. Commodi, nisi. Iusto, accusantium a.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<div class="couple groom text-center animate-box">
-						<img src="{% static "images/groom.jpg" %}" class="img-responsive" alt="">
-						<div class="desc">
-							<h2>Louie Jie L. Mahusay</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda vero totam eum, necessitatibus reprehenderit nisi, ratione neque aspernatur sapiente minus? Omnis neque labore distinctio aspernatur esse impedit laboriosam, veritatis dolorem!</p>
-							<ul class="social social-circle">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="couple bride text-center animate-box">
-						<img src="{% static "images/bride.jpg" %}" class="img-responsive" alt="">
-						<div class="desc">
-							<h2>Marializa R. Tabay</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda vero totam eum, necessitatibus reprehenderit nisi, ratione neque aspernatur sapiente minus? Omnis neque labore distinctio aspernatur esse impedit laboriosam, veritatis dolorem!</p>
-							<ul class="social social-circle">
-								<li><a href="#"><i class="icon-twitter"></i></a></li>
-								<li><a href="#"><i class="icon-facebook"></i></a></li>
-								<li><a href="#"><i class="icon-instagram"></i></a></li>
-							</ul>
-						</div>
+						<h2>La Finca</h2>
+						<p>Las Jarillas (M607, km 19.9. Madrid)</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div id="qbootstrap-story" data-section="story">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-12 text-center section-heading svg-sm-2">
-						<img src="{% static "images/flaticon/svg/003-luxury.svg" %}" class="svg" alt="">
-						<h2>Our Love Story</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="timeline animate-box">
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(/static/images/couple-1.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="overlay"></div>
-								<div class="timeline-heading">
-									<h3 class="timeline-title">First We Meet</h3>
-									<span class="date">June 10, 2017</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(/static/images/couple-2.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="overlay overlay-2"></div>
-								<div class="timeline-heading">
-									<h3 class="timeline-title">First Date</h3>
-									<span class="date">June 10, 2017</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box">
-							<div class="timeline-badge" style="background-image:url(/static/images/couple-3.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="overlay"></div>
-								<div class="timeline-heading">
-									<h3 class="timeline-title">In A Relationship</h3>
-									<span class="date">June 14, 2017</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-inverted animate-box">
-							<div class="timeline-badge" style="background-image:url(/static/images/couple-4.jpg);"></div>
-							<div class="timeline-panel">
-								<div class="overlay overlay-2"></div>
-								<div class="timeline-heading">
-									<h3 class="timeline-title">We're Engaged</h3>
-									<span class="date">Sept. 01, 2017</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in .</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	
 
 	<div id="qbootstrap-testimonials" class="qbootstrap-greetings" data-section="greetings" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/cover_bg_1.jpg);">
 	<div class="overlay"></div>	
