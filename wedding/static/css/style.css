@@ -204,6 +204,8 @@ h1, h2, h3, h4, h5, h6 {
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
   border-radius: 0px;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 768px) {
   #qbootstrap-header .navbar-default {
