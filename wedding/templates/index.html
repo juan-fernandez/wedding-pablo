@@ -67,13 +67,11 @@
 				<li class="active"><a href="#" data-nav-section="home"><span>Inicio</span></a></li>
 				<li><a href="#" data-nav-section="church">La Iglesia</a></li>
 				<li><a href="#" data-nav-section="venue"><span>La Finca</span></a></li>
-				<li><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-confirm">Registro</button></li>
-	            <li><a href="#" data-nav-section="greetings"><span>Greetings</span></a></li>
-	            <li><a href="#" data-nav-section="people"><span>People</span></a></li>
-	            <li><a href="#" data-nav-section="when-where"><span>When &amp; Where</span></a></li>
-	            <li><a href="#" data-nav-section="rsvp"><span>RSVP</span></a></li>
-	            <li><a href="#" data-nav-section="gallery"><span>Gallery</span></a></li>
-	            <li><a href="#" data-nav-section="blog"><span>Blog</span></a></li>
+				<li><a href="#" data-nav-section="parkings"><span>Aparcamientos</span></a></li>
+				<li><a href="#" data-nav-section="register"><span>Lista de Boda</span></a></li>
+				<li><a href="#" data-nav-section="what-there-is-not"><span>¿Qué no habrá en la boda?</span></a></li>
+				<li><a href="#" data-nav-section="last-news"><span>Últimas Noticias</span></a></li>
+				<li><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-confirm">Confirmar Asistencia</button></li>
 	          </ul>
 	        </div>
 		    </nav>
@@ -106,10 +104,10 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 animate-box">
 					<div class="col-md-12 text-center section-heading svg-sm colored">
-						<img class="logo-get-married" src="{% static "images/AUPA-LOGO-01.png" %}" class="svg" alt="">
+						<img class="au-logo-get-married" src="{% static "images/AUPA-LOGO-01.png" %}" class="svg" alt="">
 						
 						<h2>Boda de Aupa</h2>
-						<p><strong>¡Hola! Bienvenido a bodadeaupa. Aquí encontrarás noticias e información actualizada sobre el evento.</strong></p>
+						<div class="datewed">¡Hola! Bienvenido a bodadeaupa. Aquí encontrarás noticias e información actualizada sobre el evento.</div>
 					</div>
 				</div>
 			</div>
@@ -137,297 +135,85 @@
 				<div class="col-md-8 col-md-offset-2">
 					<div class="col-md-12 text-center section-heading svg-sm-2 colored">
 						<h2>La Finca</h2>
-						<p>Las Jarillas (M607, km 19.9. Madrid)</p>
+						<div class="col-md-10 col-md-offset-1 subtext">
+							<h3>Finca Las Jarillas. M-607, Km 19.900, 28049 Madrid.</h3>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="qbootstrap-testimonials" class="qbootstrap-greetings" data-section="greetings" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/finca.jpg);">
+	<div id="qbootstrap-testimonials" class="qbootstrap-greetings au-finca-no-repeat" data-section="greetings" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/finca.jpg);">
 	<div class="overlay"></div>	
 		<div class="container" style="height:1000px">
 		</div>
 	</div>
 
-	<div id="qbootstrap-people" data-section="people">
+	<div id="qbootstrap-gallery" data-section="parkings">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="col-md-12 text-center section-heading svg-sm colored">
 						<img src="{% static "images/flaticon/svg/005-two.svg" %}" class="svg" alt="">
-						<h2>The Groomsmen</h2>
-						<div class="row">
-						<div class="col-md-10 col-md-offset-1 subtext  ">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
-						</div>
-					</div>
-					</div>
-				</div>
-			</div>
-			<div class="row row-bottom-padded-lg">
-				<div class="col-md-3 text-center animate-box">
-					<div class="groom-men">
-						<img src="{% static "images/groom-men-1.jpg" %}" class="img-responsive" alt="">
-						<h3>Ian Bill</h3>
-					</div>
-				</div>
-				<div class="col-md-3 text-center animate-box">
-					<div class="groom-men">
-						<img src="{% static "images/groom-men-2.jpg" %}" class="img-responsive" alt="">
-						<h3>George Smith</h3>
-					</div>
-				</div>
-				<div class="col-md-3 text-center animate-box">
-					<div class="groom-men">
-						<img src="{% static "images/groom-men-3.jpg" %}" class="img-responsive" alt="">
-						<h3>Brian Thompson</h3>
-					</div>
-				</div>
-				<div class="col-md-3 text-center animate-box">
-					<div class="groom-men">
-						<img src="{% static "images/groom-men-4.jpg" %}" class="img-responsive" alt="">
-						<h3>David Howard</h3>
-					</div>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-12 text-center section-heading svg-sm colored">
-						<img src="{% static "images/flaticon/svg/005-two.svg" %}" class="svg" alt="">
-						<h2>The Bridesmaid</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-3 text-center animate-box">
-					<div class="groom-men">
-						<img src="{% static "images/bridesmaid-1.jpg" %}" class="img-responsive" alt="">
-						<h3>Angel Thomas</h3>
-					</div>
-				</div>
-				<div class="col-md-3 text-center animate-box">
-					<div class="groom-men">
-						<img src="{% static "images/bridesmaid-2.jpg" %}" class="img-responsive" alt="">
-						<h3>Kathy Shol</h3>
-					</div>
-				</div>
-				<div class="col-md-3 text-center animate-box">
-					<div class="groom-men">
-						<img src="{% static "images/bridesmaid-3.jpg" %}" class="img-responsive" alt="">
-						<h3>Rose Mel</h3>
-					</div>
-				</div>
-				<div class="col-md-3 text-center animate-box">
-					<div class="groom-men">
-						<img src="{% static "images/bridesmaid-4.jpg" %}" class="img-responsive" alt="">
-						<h3>Ann Hathway</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="qbootstrap-when-where" data-section="when-where">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-12 text-center section-heading svg-sm colored">
-						<img src="{% static "images/flaticon/svg/005-two.svg" %}" class="svg" alt="">
-						<h2>Ceremony &amp; Party</h2>
+						<h2>Aparcamientos</h2>
 						<div class="row">
 						<div class="col-md-10 col-md-offset-1 subtext">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+							<h3>Aqui tienes información sobre aparcamientos.</h3>
 						</div>
 					</div>
 					</div>
 				</div>
 			</div>
-			<div class="row row-bottom-padded-md">
-				<div class="col-md-6 text-center animate-box">
-					<div class="wedding-events">
-						<div class="ceremony-bg" style="background-image: url(/static/images/wed-ceremony.jpg);"></div>
-						<div class="desc">
-							<h3>Wedding Ceremony</h3>
-							<div class="row">
-								<div class="col-md-2 col-md-push-5">
-									<div class="icon-tip">
-										<span class="icon"><i class="icon-heart-o"></i></span>
-									</div>
-								</div>
-								<div class="col-md-5 col-md-pull-1">
-									<div class="date">
-										<i class="icon-calendar"></i>
-										<span>Saturday</span>
-										<span>02 Dec. 2017</span>
-									</div>
-								</div>
-								<div class="col-md-5 col-md-pull-1">
-									<div class="date">
-										<i class="icon-clock2"></i>
-										<span>10:00 AM</span>
-										<span>11:00 AM</span>
-									</div>
-								</div>
-							</div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6 text-center animate-box">
-					<div class="wedding-events">
-						<div class="ceremony-bg" style="background-image: url(/static/images/wed-party.jpg);"></div>
-						<div class="desc">
-							<h3>Wedding Party</h3>
-							<div class="row">
-								<div class="col-md-2 col-md-push-5">
-									<div class="icon-tip">
-										<span class="icon"><i class="icon-heart-o"></i></span>
-									</div>
-								</div>
-								<div class="col-md-5 col-md-pull-1">
-									<div class="date">
-										<i class="icon-calendar"></i>
-										<span>Saturday</span>
-										<span>02 Dec. 2017</span>
-									</div>
-								</div>
-								<div class="col-md-5 col-md-pull-1">
-									<div class="date">
-										<i class="icon-clock2"></i>
-										<span>10:00 AM</span>
-										<span>11:00 AM</span>
-									</div>
-								</div>
-							</div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-							<p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<div id="map" class="qbootstrap-map"></div>
-				</div>
-			</div>
-		</div>
 		</div>
 	</div>
-
 	
-
-	<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" data-stellar-background-ratio="0.5" style="background-image: url(/static/images/cover_bg_1.jpg);">
-		<div class="overlay"></div>
+	<div id="qbootstrap-gallery" class="au-background-grey" data-section="register">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="col-md-12 text-center section-heading svg-sm colored">
 						<img src="{% static "images/flaticon/svg/005-two.svg" %}" class="svg" alt="">
-						<h2>You Are Invited</h2>
+						<h2>Lista de boda</h2>
 						<div class="row">
 						<div class="col-md-10 col-md-offset-1 subtext">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+							<h3>Aquí tendrás información sobre la lista de boda.</h3>
 						</div>
 					</div>
-					</div>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-10 col-md-offset-1">
-					<form class="form-inline">
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="name" class="sr-only">Name</label>
-								<input type="name" class="form-control" id="name" placeholder="Name">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<div class="form-group">
-								<label for="email" class="sr-only">Email</label>
-								<input type="email" class="form-control" id="email" placeholder="Email">
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">I am Attending</button>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="qbootstrap-gallery" data-section="gallery">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2">
-					<div class="col-md-12 text-center section-heading svg-sm colored">
-						<img src="{% static "images/flaticon/svg/005-two.svg" %}" class="svg" alt="">
-						<h2>Our Selfie Photos</h2>
-						<div class="row">
-						<div class="col-md-10 col-md-offset-1 subtext">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
-						</div>
-					</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-3 col-sm-6">
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup image-popup" href="{% static "images/gallery-1.jpg" %}"><img src="{% static "images/gallery-1.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-10.jpg" %}"><img src="{% static "images/gallery-10.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-6.jpg" %}"><img src="{% static "images/gallery-6.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-2.jpg" %}"><img src="{% static "images/gallery-2.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-5.jpg" %}"><img src="{% static "images/gallery-5.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-7.jpg" %}"><img src="{% static "images/gallery-7.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-3.jpg" %}"><img src="{% static "images/gallery-3.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-4.jpg" %}"><img src="{% static "images/gallery-4.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-8.jpg" %}"><img src="{% static "images/gallery-8.jpg" %}" class="img-responsive" alt=""></a>
-					</div>
-					<div class="gallery animate-box">
-						<a class="gallery-img image-popup" href="{% static "images/gallery-9.jpg" %}"><img src="{% static "images/gallery-9.jpg" %}" class="img-responsive" alt=""></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="qbootstrap-press" data-section="blog">
+	<div id="qbootstrap-gallery" data-section="what-there-is-not">
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2">
 					<div class="col-md-12 text-center section-heading svg-sm colored">
 						<img src="{% static "images/flaticon/svg/005-two.svg" %}" class="svg" alt="">
-						<h2>Our Blog</h2>
+						<h2>¿Qué no habrá en la boda?</h2>
 						<div class="row">
 						<div class="col-md-10 col-md-offset-1 subtext">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+							<h3></h3>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="qbootstrap-press" data-section="last-news">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-12 text-center section-heading svg-sm colored">
+						<img src="{% static "images/flaticon/svg/005-two.svg" %}" class="svg" alt="">
+						<h2>Últimas Noticias</h2>
+						<div class="row">
+						<div class="col-md-10 col-md-offset-1 subtext">
+							<h3>Aquí te enterarás de las últimas noticias sobre la bodadeaupa.</h3>
 						</div>
 					</div>
 					</div>
@@ -488,19 +274,9 @@
 
 	<footer id="footer" role="contentinfo">
 		<div class="container">
-			<div class="row row-bottom-padded-sm">
-				<div class="col-md-12">
-					<p class="copyright text-center">&copy; 2017 <a href="index.html">Wedding</a>. All Rights Reserved. Images by <a href="http://unsplash.com/" target="_blank">Unsplash</a></p>
-				</div>
-			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<ul class="social social-circle">
-						<li><a href="#"><i class="icon-twitter"></i></a></li>
-						<li><a href="#"><i class="icon-facebook"></i></a></li>
-						<li><a href="#"><i class="icon-youtube"></i></a></li>
-						<li><a href="#"><i class="icon-instagram"></i></a></li>
-					</ul>
+					<img class="au-logo-get-married-footer" src="{% static "images/AUPA-LOGO-01-favicon.png" %}" class="svg" alt="">
 				</div>
 			</div>
 		</div>
