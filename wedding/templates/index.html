@@ -15,21 +15,19 @@
 	<meta name="author" content="QBOOTSTRAP.COM" />
 
   	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+	<meta property="og:title" content="Boda de Aupa"/>
+	<meta property="og:image" content="{% static "images/AUPA-LOGO-01.png" %}"/>
+	<meta property="og:url" content="https://bodadeaupa.es"/>
+	<meta property="og:site_name" content="Boda de Aupa"/>
+	<meta property="og:description" content="Entérate de las últimas de la boda de Aurora y Pablo"/>
+	<meta name="twitter:title" content="Boda de Aupa" />
+	<meta name="twitter:image" content="{% static "images/AUPA-LOGO-01.png" %}" />
+	<meta name="twitter:url" content="https://bodadeaupa.es" />
+	<meta name="twitter:card" content={% static "images/AUPA-LOGO-01.png" %} />
 	
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="{% static "images/AUPA-LOGO-01-favicon.png" %}">
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Animate.css -->
@@ -69,7 +67,7 @@
 				<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="#" data-nav-section="home"><span>Inicio</span></a></li>
-					<li><a href="#" data-nav-section="church">La Iglesia</a></li>
+					<li><a href="#" data-nav-section="church"><span>La Iglesia</span></a></li>
 					<li><a href="#" data-nav-section="venue"><span>La Finca</span></a></li>
 					<li><a href="#" data-nav-section="parkings"><span>Aparcamientos</span></a></li>
 					<li><a href="#" data-nav-section="register"><span>Lista de Boda</span></a></li>
@@ -250,61 +248,57 @@
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 					<h4 class="modal-title" id="modal-confirm-label">Confirmar asistencia</h4>
 				</div>
-				<div class="modal-body">
-					<form class="form-horizontal">
-
-					<!-- Fullname -->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="fullname">Nombre y apellidos</label>  
-						<div class="col-md-5">
-							<input id="fullname" name="fullname" type="text" class="form-control input-md" required>
-						</div>
-					</div>
-
-					<!-- Email -->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="email">Email</label>  
-						<div class="col-md-5">
-							<input id="email" name="email" type="text" class="form-control input-md" required>
-						</div>
-					</div>
-
-					<!-- Attendance -->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="attendance">¿Vienes? :D</label>
-						<div class="col-md-5">
-							<div class="radio">
-								<label for="attendance-0">
-									<input type="radio" name="attendance" id="attendance-0" value="true" checked="checked">
-									¡Contad conmigo!
-								</label>
-							</div>
-							<div class="radio">
-								<label for="attendance-1">
-									<input type="radio" name="attendance" id="attendance-1" value="false">
-									No voy a asistir a la boda
-								</label>
+				<form class="form-horizontal" action='/' method="post">
+					<div class="modal-body">
+						{% csrf_token %}
+						<!-- Fullname -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="name">Nombre y apellidos</label>  
+							<div class="col-md-5">
+								<input id="name" name="name" type="text" class="form-control input-md" required>
 							</div>
 						</div>
-					</div>
 
-					<!-- How many -->
-					<div class="form-group">
-						<label class="col-md-4 control-label" for="how-many">¿Cuántos seréis?</label>  
-						<div class="col-md-5">
-							<input id="how-many" name="how-many" type="number" min="1" max="3" value="1" class="form-control input-md" required>
+						<!-- Email -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="email">Email</label>  
+							<div class="col-md-5">
+								<input id="email" name="email" type="text" class="form-control input-md" required>
+							</div>
+						</div>
+
+						<!-- Attendance -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="attendance">¿Vienes? :D</label>
+							<div class="col-md-5">
+								<div class="radio">
+									<label for="attendance-0">
+										<input type="radio" name="attendance" id="attendance-0" value="true" checked="checked">
+										¡Contad conmigo!
+									</label>
+								</div>
+								<div class="radio">
+									<label for="attendance-1">
+										<input type="radio" name="attendance" id="attendance-1" value="false">
+										No voy a asistir a la boda
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<!-- How many -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="how_many">¿Cuántos seréis?</label>  
+							<div class="col-md-5">
+								<input id="how_many" name="how_many" type="number" min="1" max="20" value="1" class="form-control input-md" required>
+							</div>
 						</div>
 					</div>
-
-					</form>								
-				</div>
-				<!-- <div class="modal-body">
-					...
-				</div> -->
-				<div class="modal-footer">
-					<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
-					<button type="button" class="btn btn-sm btn-primary">Enviar</button>
-				</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Cancelar</button>
+						<input type="submit" value="Enviar" class="btn btn-sm btn-primary"></input>
+					</div>
+				</form>								
 			</div>
 		</div>
 	</div>
