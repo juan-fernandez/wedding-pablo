@@ -38,7 +38,13 @@
   background-color: #f4f4f4 !important;
 }
 .au-background-centered{
-  background-position-x: 50% !important;
+  background-image: url(/static/images/bodadeaupa_test.png);
+  background-position-x: 39% !important;
+}
+@media screen and (max-width: 500px){
+  .au-background-centered{
+    background-image: url(/static/images/foto_fondo_original.jpg)
+  }
 }
 
 .navbar-collapse.collapsing {
