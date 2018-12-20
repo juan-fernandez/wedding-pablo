@@ -36,3 +36,19 @@
 .au-background-grey{
   background-color: #f4f4f4 !important;
 }
+.au-background-centered{
+  background-position-x: 50% !important;
+}
+.navbar-collapse.collapsing {
+  background-color: white;
+  width: 100%;
+}
+.navbar-collapse.collapse.in {
+  background-color: white;
+  width: 100%;
+}
+@media screen and (max-width: 768px){
+  #qbootstrap-header{
+    background-color: transparent;
+  }
+}
