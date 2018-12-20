@@ -59,6 +59,12 @@
   .navbar-collapse.collapse{
     display: none !important;
   }
+  
+}
+@media screen and (min-width: 767px) {
+  .au-confirm-assistance{
+    margin-top:17px;
+  }
 }
 .navbar-collapse.collapse.in {
   display: block !important;
@@ -71,3 +77,6 @@
   }
 }
 
+.au-confirm-assistance{
+  margin-left:17px;
+}
