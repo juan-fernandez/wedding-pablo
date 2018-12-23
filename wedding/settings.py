@@ -25,7 +25,7 @@ SECRET_KEY = 'prz6o@&31k2rkij*acpj8qab^=ad11z9f0ml*#9_!!)ccds3vk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['139.59.212.114', 'localhost', 'bodadeaupa.es', 'www.bodadeaupa.es', '192.168.1.143']
+ALLOWED_HOSTS = ['139.59.212.114', 'localhost', 'bodadeaupa.es', 'www.bodadeaupa.es', '192.168.1.143', '192.168.1.139']
 
 
 # Application definition
