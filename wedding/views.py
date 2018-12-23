@@ -19,3 +19,9 @@ class Landing(TemplateView):
             return HttpResponseRedirect('/gracias')
         else:
             return HttpResponseRedirect('/error')
+
+class Error(TemplateView):
+    template_name = "error.html"
+
+class Thanks(TemplateView):
+    template_name = "thanks.html"

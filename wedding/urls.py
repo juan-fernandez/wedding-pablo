@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from wedding.views import Landing
+from wedding.views import Landing, Thanks, Error
 
 urlpatterns = [
     path('', Landing.as_view(), name='landing'),
+    path('gracias/', Thanks.as_view(), name='gracias'),
+    path('error/', Error.as_view(), name='error'),
     path('admin/', admin.site.urls),
 ]
