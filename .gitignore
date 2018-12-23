@@ -2,3 +2,5 @@
 db.sqlite3
 static/admin/*
 wedding-venv
+credentials.json
+token.json
