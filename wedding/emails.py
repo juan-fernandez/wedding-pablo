@@ -9,7 +9,7 @@ import base64
 # If modifying these scopes, delete the file token.json.
 SCOPES = 'https://www.googleapis.com/auth/gmail.send'
 
-RECEIVER_EMAIL = 'jfdezalba89@gmail.com'
+RECEIVER_EMAIL = 'aupa18mayo@gmail.com'
 
 ACCEPTED_SUBJECT = 'ACEPTADO - Asistencia Boda de Aupa'
 REJECTED_SUBJECT = 'DENEGADO - Asistencia Boda de Aupa'
