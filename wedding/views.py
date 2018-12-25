@@ -3,6 +3,7 @@ from .forms import ConfirmAssistance
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .emails import send_email
+from .models import Attendee
 
 class Landing(TemplateView):
     template_name = "index.html"
@@ -16,6 +17,12 @@ class Landing(TemplateView):
             how_many = form.cleaned_data['how_many']
             is_coming = True if attendance == 'true' else False
             send_email(name, email, how_many, is_coming)
+            Attendee.objects.create(
+                name=name,
+                email=email,
+                is_coming=is_coming,
+                number_attendees=how_many
+            )
             return HttpResponseRedirect('/gracias')
         else:
             return HttpResponseRedirect('/error')
