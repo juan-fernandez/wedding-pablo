@@ -3,11 +3,11 @@ from .forms import ConfirmAssistance
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .emails import send_email
-from .models import Attendee
+from .models import Attendee, BlogPost
 
 class Landing(TemplateView):
     template_name = "index.html"
-    
+
     def post(self, request, *args, **kwargs):
         form = ConfirmAssistance(request.POST)
         if form.is_valid():

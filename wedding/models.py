@@ -11,3 +11,9 @@ class Attendee(models.Model):
     class Meta:
         verbose_name = 'Asistente'
         verbose_name_plural = 'Asistentes'
+
+class BlogPost(models.Model):
+    title = models.CharField(max_length=30, verbose_name="Título")
+    slug = models.CharField(max_length=20, verbose_name="URL")
+    content = models.TextField(max_length=500, verbose_name="Contenido")
+    created_at = models.DateField(auto_now=True)
