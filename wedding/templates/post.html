@@ -57,21 +57,19 @@
 	</head>
 	<body>
 
-    <div id="qbootstrap-press" data-section="last-news">
+    <div id="qbootstrap-press au-blog-container" data-section="last-news">
         <div class="au-blog-background-image" style="background-image:url({{blog_post.image.url}})"></div>
         <div class="container" style="height:100vh" >
             <div class="row animate-box">
-                <div class="col-md-12">
-                    <div class="col-md-12 text-center section-heading svg-sm colored">
-                        <h2>{{blog_post.title}}</h2>
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1 subtext">
-                                <div>{{blog_post.content}}</div>
-                            </div>
-                            <a href='/' class="btn btn-sm btn-primary">Volver</a>
-                    </div>
-                    </div>
-                </div>
+				<div class="col-md-12 text-center section-heading svg-sm colored">
+					<h2>{{blog_post.title}}</h2>
+					<div class="col-md-10 col-md-offset-1 subtext au-blog-content">
+						{{blog_post.content}}
+					</div>
+					<div class="au-blog-back-button">
+						<a href='/' class="btn btn-sm btn-primary">Volver</a>
+					</div>
+				</div>
             </div>
         </div>
     </div>
