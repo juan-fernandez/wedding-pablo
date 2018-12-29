@@ -19,25 +19,25 @@ class Landing(TemplateView):
         })
 
 class FormSubmit(TemplateView):
-
     def post(self, request, *args, **kwargs):
-        form = ConfirmAssistance(request.POST)
-        if form.is_valid():
-            email = form.cleaned_data['email']
-            name = form.cleaned_data['name']
-            attendance = form.cleaned_data['attendance']
-            how_many = form.cleaned_data['how_many']
-            is_coming = True if attendance == 'true' else False
-            send_email(name, email, how_many, is_coming)
-            Attendee.objects.create(
-                name=name,
-                email=email,
-                is_coming=is_coming,
-                number_attendees=how_many
-            )
-            return HttpResponseRedirect('/gracias')
-        else:
-            return HttpResponseRedirect('/error')
+        form_name = kwargs['form_name']
+        if form_name == 'confirm-attendee':
+            form = ConfirmAssistance(request.POST)
+            if form.is_valid():
+                email = form.cleaned_data['email']
+                name = form.cleaned_data['name']
+                attendance = form.cleaned_data['attendance']
+                how_many = form.cleaned_data['how_many']
+                is_coming = True if attendance == 'true' else False
+                # send_email(name, email, how_many, is_coming)
+                Attendee.objects.create(
+                    name=name,
+                    email=email,
+                    is_coming=is_coming,
+                    number_attendees=how_many
+                )
+                return HttpResponseRedirect('/gracias')
+        return HttpResponseRedirect('/error')
 
 class Error(TemplateView):
     template_name = "error.html"

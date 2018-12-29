@@ -22,7 +22,7 @@ from wedding.views import Landing, FormSubmit, Thanks, Error, Blog, Post
 
 urlpatterns = [
     path('', Landing.as_view(), name='landing'),
-    path('confirm-attendee/', FormSubmit.as_view(), name='confirm-attendee'),
+    path('confirm-attendee/', FormSubmit.as_view(), {'form_name': 'confirm-attendee'}, name='confirm-attendee'),
     path('gracias/', Thanks.as_view(), name='gracias'),
     path('error/', Error.as_view(), name='error'),
     path('admin/', admin.site.urls),
