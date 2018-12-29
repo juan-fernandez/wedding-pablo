@@ -34,14 +34,21 @@ class Landing(TemplateView):
         else:
             return HttpResponseRedirect('/error')
 
+
 class Error(TemplateView):
     template_name = "error.html"
 
 class Thanks(TemplateView):
     template_name = "thanks.html"
 
-
 class Blog(TemplateView):
+    template_name = "blog.html"
+
+    def get(self, request):
+        posts = BlogPost.objects.filter(publication_date__lte=timezone.now()).order_by('-publication_date')
+        return render(request, self.template_name, {'posts': posts})
+
+class Post(TemplateView):
     template_name = "post.html"
 
     def get(self, request, slug):

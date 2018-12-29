@@ -1,0 +1,26 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container">
+    <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12 text-center section-heading svg-sm colored">
+                <img src="{% static "images/flaticon/svg/005-two.svg" %}" class="svg" alt="">
+                <h2>Aupa Blog</h2>
+                <div class="row">
+                <div class="col-md-10 col-md-offset-1 subtext">
+                    <h3>Aquí te enterarás de las últimas noticias sobre la bodadeaupa.</h3>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+    {% for post in posts %}
+        {% include "embedded_post.html" with post=post %}
+    {% endfor %}
+    </div>
+</div>
+{% endblock body %}
