@@ -12,7 +12,7 @@ class Landing(TemplateView):
     template_name = "index.html"
 
     def get(self, request):
-        posts = BlogPost.objects.filter(publication_date__lte=timezone.now()).order_by('publication_date')
+        posts = BlogPost.objects.filter(publication_date__lte=timezone.now()).order_by('-publication_date')[:4]
         return render(request, self.template_name, {'posts': posts})
 
     def post(self, request, *args, **kwargs):
