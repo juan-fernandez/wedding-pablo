@@ -18,6 +18,8 @@ class Landing(TemplateView):
             'show_blog_button': len(posts) > 4,
         })
 
+class FormSubmit(TemplateView):
+
     def post(self, request, *args, **kwargs):
         form = ConfirmAssistance(request.POST)
         if form.is_valid():
@@ -36,7 +38,6 @@ class Landing(TemplateView):
             return HttpResponseRedirect('/gracias')
         else:
             return HttpResponseRedirect('/error')
-
 
 class Error(TemplateView):
     template_name = "error.html"
