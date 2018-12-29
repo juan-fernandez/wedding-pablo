@@ -17,3 +17,7 @@ class BlogPost(models.Model):
     slug = models.CharField(max_length=20, verbose_name="URL")
     content = models.TextField(max_length=500, verbose_name="Contenido")
     created_at = models.DateField(auto_now=True)
+    publication_date = models.DateField(
+        verbose_name="Fecha de publicación automática",
+        null=True,
+    )

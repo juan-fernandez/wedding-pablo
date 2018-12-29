@@ -7,6 +7,6 @@ class AttendeeAdmin(admin.ModelAdmin):
 admin.site.register(Attendee, AttendeeAdmin)
 
 class BlogPostAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'created_at')
+    list_display = ('title', 'slug', 'created_at', 'publication_date')
 
 admin.site.register(BlogPost, BlogPostAdmin)

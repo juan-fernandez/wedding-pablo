@@ -7,7 +7,6 @@ from .models import Attendee, BlogPost
 
 class Landing(TemplateView):
     template_name = "index.html"
-
     def post(self, request, *args, **kwargs):
         form = ConfirmAssistance(request.POST)
         if form.is_valid():
