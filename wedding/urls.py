@@ -1,6 +1,6 @@
 """wedding URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The urlpatterns list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
 Examples:
 Function views
@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
+
 from wedding.views import Landing, Thanks, Error
 
 urlpatterns = [
@@ -22,4 +25,4 @@ urlpatterns = [
     path('gracias/', Thanks.as_view(), name='gracias'),
     path('error/', Error.as_view(), name='error'),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

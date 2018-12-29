@@ -10,7 +10,7 @@
                 <p><a href="#" class="btn btn-primary btn-sm">Lee más</a></p>
             </div>
         </div>
-        <div style="background-image: url('{{post.image_url}}')" class="au-blog-excerpt-image">
+        <div {% if post.image %}style="background-image: url('{{post.image.url}}')"{% endif %} class="au-blog-excerpt-image">
         </div>
     </div>
 </div>
