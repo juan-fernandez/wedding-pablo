@@ -13,6 +13,15 @@ class Attendee(models.Model):
         verbose_name = 'Asistente'
         verbose_name_plural = 'Asistentes'
 
+class Suggestion(models.Model):
+    suggestion = models.TextField(max_length=240)
+    def __str__(self):
+        return self.suggestion
+
+    class Meta:
+        verbose_name = 'Sugerencia'
+        verbose_name_plural = 'Sugerencias'
+
 class BlogPost(models.Model):
     slug = models.SlugField(max_length=30, unique=True)
     title = models.CharField(max_length=30, verbose_name="Título")

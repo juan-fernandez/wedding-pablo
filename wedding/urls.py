@@ -18,12 +18,15 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 
-from wedding.views import Landing, Thanks, Error, Blog
+from wedding.views import Landing, FormSubmit, Thanks, Error, Blog, Post
 
 urlpatterns = [
     path('', Landing.as_view(), name='landing'),
+    path('confirm-attendee/', FormSubmit.as_view(), {'form_name': 'confirm-attendee'}, name='confirm-attendee'),
+    path('make-suggestion/', FormSubmit.as_view(), {'form_name': 'make-suggestion'}, name='make-suggestion'),
     path('gracias/', Thanks.as_view(), name='gracias'),
     path('error/', Error.as_view(), name='error'),
     path('admin/', admin.site.urls),
-    path('blog/<slug:slug>/', Blog.as_view(), name='blog')
+    path('blog/', Blog.as_view(), name='blog'),
+    path('blog/<slug:slug>/', Post.as_view(), name='post'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
