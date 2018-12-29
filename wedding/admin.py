@@ -8,5 +8,6 @@ admin.site.register(Attendee, AttendeeAdmin)
 
 class BlogPostAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug', 'created_at', 'publication_date')
+    readonly_fields = ['slug']
 
 admin.site.register(BlogPost, BlogPostAdmin)

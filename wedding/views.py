@@ -1,9 +1,11 @@
-from django.views.generic.base import TemplateView
+from django.views.generic.base import TemplateView, View
 from .forms import ConfirmAssistance
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from .emails import send_email
 from .models import Attendee, BlogPost
+from django.template.response import TemplateResponse
 
 class Landing(TemplateView):
     template_name = "index.html"
@@ -31,3 +33,15 @@ class Error(TemplateView):
 
 class Thanks(TemplateView):
     template_name = "thanks.html"
+
+
+class Blog(TemplateView):
+    template_name = "post.html"
+
+    def get(self, request, slug):
+        blog_post = get_object_or_404(BlogPost, slug=slug)
+        return TemplateResponse(
+            request,
+            self.template_name, 
+            context={'blog_post': blog_post}
+        )
