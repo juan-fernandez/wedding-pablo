@@ -1,11 +1,11 @@
 from django.views.generic.base import TemplateView, View
-from .forms import ConfirmAssistance
+from .forms import ConfirmAssistance, MakeSuggestion
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.utils import timezone
 from .emails import send_email
-from .models import Attendee, BlogPost
+from .models import Attendee, Suggestion, BlogPost
 from django.template.response import TemplateResponse
 
 class Landing(TemplateView):
@@ -29,13 +29,19 @@ class FormSubmit(TemplateView):
                 attendance = form.cleaned_data['attendance']
                 how_many = form.cleaned_data['how_many']
                 is_coming = True if attendance == 'true' else False
-                # send_email(name, email, how_many, is_coming)
+                send_email(name, email, how_many, is_coming)
                 Attendee.objects.create(
                     name=name,
                     email=email,
                     is_coming=is_coming,
                     number_attendees=how_many
                 )
+                return HttpResponseRedirect('/gracias')
+        if form_name == 'make-suggestion':
+            form = MakeSuggestion(request.POST)
+            if form.is_valid():
+                suggestion = form.cleaned_data['suggestion']
+                Suggestion.objects.create(suggestion=suggestion)
                 return HttpResponseRedirect('/gracias')
         return HttpResponseRedirect('/error')
 
