@@ -16,7 +16,12 @@ class Attendee(models.Model):
 class BlogPost(models.Model):
     slug = models.SlugField(max_length=30, unique=True)
     title = models.CharField(max_length=30, verbose_name="Título")
-    subtitle = models.CharField(max_length=100, verbose_name="Subtítulo", null=True)
+    subtitle = models.CharField(
+        max_length=100,
+        verbose_name="Subtítulo",
+        null=True,
+        blank=True,
+    )
     image = models.ImageField(null=True)
     content = models.TextField(max_length=500, verbose_name="Contenido")
     created_at = models.DateField(auto_now=True)
