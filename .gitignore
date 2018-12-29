@@ -4,3 +4,4 @@ static/admin/*
 wedding-venv
 credentials.json
 token.json
+media/*
