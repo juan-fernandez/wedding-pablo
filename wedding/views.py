@@ -12,8 +12,11 @@ class Landing(TemplateView):
     template_name = "index.html"
 
     def get(self, request):
-        posts = BlogPost.objects.filter(publication_date__lte=timezone.now()).order_by('-publication_date')[:4]
-        return render(request, self.template_name, {'posts': posts})
+        posts = BlogPost.objects.filter(publication_date__lte=timezone.now()).order_by('-publication_date')
+        return render(request, self.template_name, {
+            'posts': posts[:4],
+            'show_blog_button': len(posts) > 4,
+        })
 
     def post(self, request, *args, **kwargs):
         form = ConfirmAssistance(request.POST)
@@ -43,7 +46,7 @@ class Thanks(TemplateView):
 
 class Blog(TemplateView):
     template_name = "blog.html"
-
+    
     def get(self, request):
         posts = BlogPost.objects.filter(publication_date__lte=timezone.now()).order_by('-publication_date')
         return render(request, self.template_name, {'posts': posts})

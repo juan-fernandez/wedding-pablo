@@ -160,10 +160,12 @@
 			{% include "embedded_post.html" with post=post %}
 		{% endfor %}
 		</div>
+		{% if show_blog_button %}
 		<div class="text-center">
 			<br>
-			<a href="/blog" class="btn btn-primary">Ir al blog</a>
+			<a href="/blog" class="btn btn-primary">Ver todos</a>
 		</div>
+		{% endif %}
 	</div>
 </div>
 
