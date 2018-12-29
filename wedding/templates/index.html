@@ -209,6 +209,9 @@
 				
 			</div>
 			<div class="row">
+			{% for post in posts %}
+				{% include "embedded_post.html" with post=post %}
+			{% endfor %}
 			</div>
 		</div>
 	</div>
