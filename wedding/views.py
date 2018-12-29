@@ -11,6 +11,8 @@ class Landing(TemplateView):
 
     def get(self, request):
         posts = BlogPost.objects.filter(publication_date__lte=timezone.now()).order_by('publication_date')
+        for post in posts:
+            post.image_url = str(post.image)[8:]
         return render(request, self.template_name, {'posts': posts})
 
     def post(self, request, *args, **kwargs):
