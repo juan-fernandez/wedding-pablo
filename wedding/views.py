@@ -3,12 +3,18 @@ from .forms import ConfirmAssistance
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
+from django.utils import timezone
 from .emails import send_email
 from .models import Attendee, BlogPost
 from django.template.response import TemplateResponse
 
 class Landing(TemplateView):
     template_name = "index.html"
+
+    def get(self, request):
+        posts = BlogPost.objects.filter(publication_date__lte=timezone.now()).order_by('publication_date')
+        return render(request, self.template_name, {'posts': posts})
+
     def post(self, request, *args, **kwargs):
         form = ConfirmAssistance(request.POST)
         if form.is_valid():

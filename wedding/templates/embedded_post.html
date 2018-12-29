@@ -1,14 +1,16 @@
 <div class="col-md-6">
     <div class="animate-box au-blog-excerpt-container">
         <div class="qbootstrap-press-text au-blog-excerpt-text">
-            <div class="au-blog-date">{{date}}</div>
+            <div class="au-blog-date">{{post.publication_date}}</div>
             <div class="au-blog-info">
-                <h3 class="h2 qbootstrap-press-title">{{title}} <span class="qbootstrap-border"></span></h3>
-                <p>{{excerpt}}</p>
+                <h3 class="h2 qbootstrap-press-title">{{post.title}} <span class="qbootstrap-border"></span></h3>
+                {% if post.subtitle %}
+                <p>{{post.subtitle}}</p>
+                {% endif %}
                 <p><a href="#" class="btn btn-primary btn-sm">Lee más</a></p>
             </div>
         </div>
-        <div style="background-image: url({{image_url}})" class="au-blog-excerpt-image">
+        <div {% if post.image %}style="background-image: url('{{post.image.url}}')"{% endif %} class="au-blog-excerpt-image">
         </div>
     </div>
 </div>

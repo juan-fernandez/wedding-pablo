@@ -72,7 +72,7 @@
 					<li><a href="#" data-nav-section="what-there-is"><span>¿Qué habrá en la boda?</span></a></li>
 					<li><a href="#" data-nav-section="what-there-is-not"><span>¿Qué no habrá en la boda?</span></a></li>
 					<li><a href="#" data-nav-section="last-news"><span>Últimas Noticias</span></a></li>
-					<li class="au-confirm-assistance"><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-confirm">Confirmar Asistencia</button></li>
+					<li class="au-confirm-assistance"><button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-confirm">Confirmar</button></li>
 				</ul>
 				</div>
 		    </nav>
@@ -209,6 +209,9 @@
 				
 			</div>
 			<div class="row">
+			{% for post in posts %}
+				{% include "embedded_post.html" with post=post %}
+			{% endfor %}
 			</div>
 		</div>
 	</div>
