@@ -66,7 +66,7 @@
                         <h2>{{blog_post.title}}</h2>
                         <div class="row">
                             <div class="col-md-10 col-md-offset-1 subtext">
-                                <div>{{blog_post.content}}</div>
+                                <div>{{blog_post.content | safe}}</div>
                             </div>
                             <a href='/' class="btn btn-sm btn-primary">Volver</a>
                     </div>
