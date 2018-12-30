@@ -1,5 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
+from froala_editor.fields import FroalaField
 
 class Attendee(models.Model):
     name = models.CharField(max_length=50)
@@ -31,13 +32,13 @@ class BlogPost(models.Model):
         null=True,
         blank=True,
     )
-    image = models.ImageField(null=True)
-    content = models.TextField(max_length=500, verbose_name="Contenido")
+    image = models.ImageField(null=True, verbose_name="Imagen en preview")
     created_at = models.DateField(auto_now=True)
     publication_date = models.DateField(
         verbose_name="Fecha de publicación automática",
         null=True,
     )
+    content = FroalaField(null=True, verbose_name="Contenido")
 
     def save(self, *args, **kwargs):
         if not self.id:
