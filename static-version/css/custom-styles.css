@@ -1,0 +1,135 @@
+.au-logo-get-married {
+  width: 360px;
+  max-width: 100%;
+  height: auto;
+}
+
+.au-navbar {
+  display: flex;
+  align-items: baseline;
+}
+
+.au-modal-confirm {
+  font-size: 14px;
+}
+
+.au-modal-confirm .form-control {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.au-finca-no-repeat {
+  background-size: cover !important;
+  position: relative;
+  background-repeat: no-repeat !important;
+  z-index: 0;
+  width: 100%;
+}
+
+.au-logo-get-married-footer {
+  width: 180px;
+  height: auto;
+}
+
+.au-background-grey {
+  background-color: #f4f4f4 !important;
+}
+.au-background-centered {
+  background-image: url(/images/bodadeaupa_test.png);
+  background-position-x: 39% !important;
+}
+@media screen and (max-width: 500px) {
+  .au-background-centered {
+    background-image: url(/images/foto_fondo_original.JPG);
+  }
+}
+
+.navbar-collapse.collapsing {
+  background-color: white;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #qbootstrap-header {
+    background-color: transparent;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 767px) {
+  .au-confirm-assistance {
+    margin-top: 17px;
+  }
+}
+.navbar-collapse.collapse.in {
+  display: block !important;
+  background-color: white;
+  width: 100%;
+}
+@media screen and (max-width: 500px) {
+  .au-smaller-if-small {
+    font-size: 35px !important;
+  }
+}
+
+.au-confirm-assistance {
+  margin-left: 17px;
+}
+
+.au-blog-excerpt-container {
+  display: flex;
+  flex-flow: row;
+  margin-right: 15px;
+  margin-left: 15px;
+  background-color: #fff;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  height: 300px;
+}
+
+.au-blog-excerpt-image {
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  height: unset;
+}
+
+@media screen and (max-width: 767px) {
+  .au-blog-excerpt-container {
+    flex-flow: column-reverse;
+    height: 600px;
+  }
+  .au-blog-excerpt-image {
+    height: 300px;
+  }
+}
+
+.au-blog-excerpt-text {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.au-blog-date {
+  height: 25px;
+}
+.au-blog-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.au-blog-background-image {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+}

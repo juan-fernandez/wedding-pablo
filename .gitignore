@@ -5,3 +5,4 @@ wedding-venv
 credentials.json
 token.json
 media/*
+venv
